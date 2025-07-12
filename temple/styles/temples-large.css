@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0a9396;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  figure img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  figure {
+    margin: 0;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    background: #fff;
+  }
+}

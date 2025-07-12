@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #005f73;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #0a9396;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem;
+  border-top: 1px solid #94d2bd;
+}
+
+nav a:hover {
+  background-color: #94d2bd;
+  color: #000;
+}
+
+#menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Make navigation responsive for desktop */
+@media (min-width: 600px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    position: static;
+  }
+  #menu {
+    display: none;
+  }
+  nav a {
+    border: none;
+    padding: 0 1rem;
+  }
+}
+
+/* Hamburger menu open state for mobile */
+.open nav {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  flex-direction: column;
+  background: #0a9396;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background: #f5f5f5;
+}
+
+/* Figure and image responsiveness */
+figure {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 350px;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #005f73;
+  color: white;
+  font-size: 0.9rem;
+}
