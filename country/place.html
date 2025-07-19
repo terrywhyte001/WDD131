@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Benin City, Nigeria - Responsive Web Page Assignment for WDD 131" />
+  <title>Benin City, Nigeria</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Benin City NG</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/benin-hero-large.webp" media="(min-width: 768px)" />
+        <img src="images/benin-hero-small.webp" alt="Benin City " width="800" height="400" />
+      </picture>
+    </section>
+
+    <section class="weather">
+      <h2>Weather <span class="icon"><img src="images/1530391_weather_clouds_sun_sunny_icon.svg" alt="Cloudy weather icon" class="weather-svg" /></span></h2>
+      <p><strong>Temperature:</strong> <span id="temperature">30</span>°C</p>
+      <p><strong>Wind Speed:</strong> <span id="windSpeed">10</span> km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="windChill"></span></p>
+    </section>
+
+    <section class="info">
+      <h2>About Benin City</h2>
+      <p>Benin City is the capital of Edo State in southern Nigeria. It's one of the oldest cities in Nigeria and has a rich history rooted in the Benin Empire, known for its arts, culture, and craftsmanship.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Evbosaru Iyen Samuel</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+
+</html>
