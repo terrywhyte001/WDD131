@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtered Temples Album</title>
+  <meta name="description" content="Temple Album featuring dynamic filtering and details by Evbosaru Iyen Samuel.">
+  <meta name="author" content="Evbosaru Iyen Samuel">
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .filters button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .temple-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .temple-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .temple-card img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Temple Picture Album</h1>
+  </header>
+  <main>
+    <div class="filters">
+      <button id="home">Home</button>
+      <button id="old">Old</button>
+      <button id="new">New</button>
+      <button id="large">Large</button>
+      <button id="small">Small</button>
+    </div>
+    <div id="temples" class="temple-grid"></div>
+  </main>
+  <footer>
+    <p>
+      &copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span> | Evbosaru Iyen Samuel
+    </p>
+  </footer>
+  <script src="scripts/filtered-temples.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
+
