@@ -1,0 +1,133 @@
+/* Base styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #1e3a8a; /* Deep Blue */
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+header .tagline {
+  font-size: 1.2rem;
+  color: #facc15; /* Yellow accent */
+  margin: 0;
+}
+
+/* Section headings */
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #1e3a8a;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* Lists and paragraphs */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.04);
+}
+
+strong {
+  color: #1e3a8a;
+}
+
+/* Color schema highlight example */
+.color-sample {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+}
+
+.button-demo {
+  background: #facc15;
+  color: #1e3a8a;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5em;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(30,58,138,0.08);
+  transition: background 0.2s;
+}
+.button-demo:hover {
+  background: #ffe066;
+}
+
+/* Wireframe images */
+section img {
+  display: block;
+  margin: 1rem auto;
+  border: 2px solid #1e3a8a;
+  border-radius: 6px;
+  background: #fff;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 1rem 0.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
