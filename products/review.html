@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+    <p class="tagline">Your feedback helps us improve our products.</p>
+  </header>
+  <main>
+    <section class="confirmation">
+      <h2>Review Submitted</h2>
+      <p>Your review has been received.</p>
+      <p>You have submitted <span id="reviewCount">0</span> review(s) during this session.</p>
+      <a href="form.html" class="button-demo">Submit Another Review</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span> | Evbosaru Iyen Samuel</p>
+  </footer>
+  <script>
+    // Review counter using localStorage
+    let count = localStorage.getItem("reviewCount");
+    count = count ? parseInt(count) + 1 : 1;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("reviewCount").textContent = count;
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
