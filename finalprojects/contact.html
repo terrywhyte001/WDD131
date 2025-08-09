@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact Programming Hub — feedback and signup form.">
+  <title>Programming Hub | Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Programming Hub</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <article class="content">
+      <h1>Contact & Newsletter Signup</h1>
+      <p>If you have feedback or want occasional tips, sign up below or send a message.</p>
+
+      <form id="contact-form" aria-label="Contact form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Send</button>
+        </div>
+
+        <div id="contact-form-msg" class="form-msg" aria-live="polite"></div>
+      </form>
+
+      <section aria-labelledby="submissions-title">
+        <h2 id="submissions-title">Saved Submissions</h2>
+        <div id="submissions-list" class="submissions" aria-live="polite">
+          <!-- saved submissions rendered here -->
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="currentyearContact"></span> Programming Hub</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentyearContact').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

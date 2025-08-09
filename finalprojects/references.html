@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programming Hub | References</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Programming Hub</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="references.html" aria-current="page">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <article class="content">
+      <h1>References</h1>
+      <ul>
+        <li>
+          Mountain River Image — Photo from Getty Images.
+          <a href="https://www.gettyimages.com/photos/mountain-river" target="_blank" rel="noopener">
+            https://www.gettyimages.com/photos/mountain-river
+          </a>
+        </li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="currentyearRef"></span> Programming Hub</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentyearRef').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

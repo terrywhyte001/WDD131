@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Programming Hub — curated learning resources, exercises, and projects to help you master modern programming.">
+  <title>Programming Hub | Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Programming Hub</a>
+
+      <button id="menuToggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 id="hero-title">Programming Hub</h1>
+        <p class="lede">Learn practical programming skills, try short projects, and track your progress — all in one place.</p>
+        <img src="images/hh.jpg" srcset="images/hh.jpg 400w, images/hh.jpg 800w, images/hh.jpg 1200w"
+     sizes="(max-width:700px) 100vw, 60vw"
+     alt="Laptop on desk with code editor open"
+     width="1200" height="600" loading="lazy">
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Featured Learning Tracks</h2>
+
+      <div class="cards" id="featured-cards">
+        <!-- Static featured cards; dynamic Learning Cards appear below -->
+        <article class="card">
+          <h3>JavaScript Essentials</h3>
+          <p>Understand the DOM, asynchronous patterns, and build interactive web experiences.</p>
+        </article>
+
+        <article class="card">
+          <h3>Python for Data</h3>
+          <p>Intro to Python, data manipulation with pandas, and basic plotting.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="learning-cards-section" aria-labelledby="learning-cards-title">
+      <h2 id="learning-cards-title">Your Learning Cards</h2>
+      <form id="card-form" class="card-form" aria-label="Add learning card">
+        <label for="card-title">Title</label>
+        <input id="card-title" name="title" type="text" required aria-required="true" minlength="2">
+        
+        <label for="card-desc">Short description</label>
+        <input id="card-desc" name="description" type="text" required aria-required="true" minlength="5">
+
+        <label for="card-lang">Language / Topic</label>
+        <select id="card-lang" name="language">
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="html-css">HTML/CSS</option>
+          <option value="csharp">C#</option>
+          <option value="other">Other</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="submit">Add Card</button>
+          <button type="button" id="clear-cards">Clear All</button>
+        </div>
+
+        <div id="card-form-msg" class="form-msg" aria-live="polite"></div>
+      </form>
+
+      <div id="cards-container" class="cards" aria-live="polite">
+        <!-- dynamic cards rendered by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="currentyear"></span> Programming Hub</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
+
